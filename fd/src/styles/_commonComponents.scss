@@ -1,0 +1,108 @@
+// @use "variables" as *;
+@import "variables";
+
+.pills-navigator {
+  .nav {
+    position: relative;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $disabled-text-color;
+      position: absolute;
+      left: 0;
+      top: 26px;
+    }
+
+    .nav-link {
+      .nav-num {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        line-height: 34px;
+        border: 2px solid $highlighter-color;
+        color: $primary-color;
+        text-align: center;
+        border-radius: 50%;
+        position: relative;
+        background-color: $highlight-bg-color;
+
+        @media (max-width: 991.98px) {
+          display: block;
+          margin: 0 auto 8px !important;
+        }
+      }
+      .nav-title {
+        display: block;
+        cursor: pointer;
+        margin-top: 18px;
+        color: $primary-color;
+
+        @media (max-width: 575.98px) {
+          display: none;
+        }
+      }
+
+      &.active {
+        background-color: transparent;
+        .nav-num {
+          color: $secondary-color;
+          background-color: $highlighter-color;
+        }
+        .nav-title {
+          color: $highlighter-color;
+        }
+      }
+    }
+  }
+}
+
+.tabs-navigator {
+  .nav {
+    border-bottom: none !important;
+    cursor: pointer;
+    .nav-item {
+      position: relative;
+    }
+    &.nav-tabs .nav-link {
+      color: $primary-color !important;
+    }
+    .nav-title {
+      color: $primary-color;
+    }
+
+    .nav-link.active {
+      border-color: $highlighter-color;
+      .nav-title {
+        color: $highlighter-color;
+      }
+    }
+  }
+}
+
+.form-wrapper {
+  // border: 1px solid black;
+  // height: 100vh;
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    .form-footer-left {
+      .btn-outline-light {
+        color: $primary-color;
+        font-weight: 700;   // before 600
+        color:black;  // adeded by akshay
+        background-color: #fff;  // added by akshay form query count showing  in bold
+        margin-left: 9px; // adeded by akshay
+      }
+    }
+    .form-footer-center{
+      // border: 1px solid black;
+      padding: 0rem 1rem;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+}

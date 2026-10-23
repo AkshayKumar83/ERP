@@ -1,0 +1,28 @@
+.welcome__container {
+  margin-inline: 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+
+
+
+}
+
+.moduleSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  // flex-grow: 1;
+  overflow-y: auto;
+  // border: 1px solid black;
+  @media (max-width: 768px) {
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+    
+}

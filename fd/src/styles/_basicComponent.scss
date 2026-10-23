@@ -1,0 +1,1265 @@
+/*
+Basic Components design layout for IITPL
+
+Table of Contents
+
+1. Button Layout
+2. Radio Button Layout
+3. Checkbox Layout
+4. Textarea Layout
+5. Textfield Layout
+6. Table Layout
+7. Style for TopUpperLeftSidebodertext 
+8. Style for Notes.
+9. style for loading in buttons
+10.Physical inventory form
+
+*/
+
+// @use "variables" as *;
+@import "variables";
+
+
+// added by akshay 11-03-26 for change bg color of form and toolbar  and bold button nameing also.
+// General card styling for forms
+
+/* outer cards */
+.form-wrapper .card:not(.form-card) {
+  background-color: #fff3cd;
+}
+
+/* main form */
+.form-wrapper.light .form-card {
+  background-color: #fff3cd;
+}
+
+.form-wrapper.light .form-body {
+  background-color: #fff3cd;
+}
+
+// Remove default padding from form headers
+.form-header {
+  padding: 0 !important;
+}
+
+// change the background color of form toolbar and button design in toolbar
+.toolbar {
+  width: 100%;
+  // padding: 4px;
+  padding-left: 25px;
+  background: #babbbc;
+}
+
+.toolbar button {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.toolbar button span {
+  color: #333;
+}
+
+.toolbar button:hover {
+  background-color: #fff3cd;
+}
+
+.toolbar button:hover span {
+  color: #000;
+}
+
+
+// for submitbar
+.form-footer {
+  background: #babbbc;
+  // padding: 6px 12px;
+}
+
+//fro mui report  card  and bg yellow /* Reports */
+
+.generic-report-page {
+  background-color: #fff3cd !important;
+  min-height: calc(100vh - 48px);
+
+}
+
+.report-card {
+  background-color: #fff3cd;
+}
+
+
+  tbody tr:focus-within {
+  border: 2px solid black;
+}
+
+// sidebar css
+
+#side-menu a,
+#side-menu a span {
+  color: #ffffff !important;
+}
+
+/* Hover par pura text yellow */
+#side-menu a:hover,
+#side-menu a:hover span {
+  color: #ffd700 !important;
+}
+
+#side-menu a.active,
+#side-menu a.active span {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.menu-title {
+  color: #ffffff !important;
+}
+
+
+/*********** 1. Button Layout ***********/
+
+.btn {
+  font-size: 14px;
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  .remixicon {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.button-group-wrapper {
+  display: flex;
+  // border: 1px solid black;
+  gap: 8px;
+  // height: 29px;
+  //  justify-content: space-around; 
+  // justify-content: ;
+
+
+  //    /* First three items in one row, next three in another */
+  //    & > *:nth-child(-n+3) {
+  //     flex: 1 1 calc(33.33% - 10px); /* Ensures three buttons per row */
+  // }
+
+  // & > *:nth-child(n+4) {
+  //     flex: 1 1 calc(33.33% - 10px); /* Ensures three buttons per row */
+  // }
+
+}
+
+/*********** 2. table Button Design ***********/
+
+.table-button {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: black;
+  color: white; // Optional for better contrast
+  border: none; // Optional if you want no border
+  cursor: pointer;
+
+  &:hover {
+    // background-color: #1a1a1a; // Darker on hover
+    background-color: rgb(43, 49, 162); // Darker on hover
+  }
+
+  &:active {
+    background-color: #333;
+  }
+
+  &:focus {
+    outline: 2px solid #555;
+  }
+}
+
+
+
+
+/*********** 2. Radio Button Layout ***********/
+
+.radio-button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  // border: 1px solid black;
+
+  .radio-button {
+    display: none;
+
+  }
+
+  .radio-icon {
+    width: 18px;
+    height: 17px;
+    margin-right: 4px;
+    padding-top: 0.1rem;
+
+    &.checked {
+      color: $highlighter-color;
+
+    }
+  }
+
+  &:hover {
+    color: $highlighter-color;
+
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .radio-text {
+      color: $disabled-text-color;
+    }
+  }
+
+  &.disabled .radio-icon {
+    color: $disabled-text-color;
+  }
+}
+
+/*********** 3. Checkbox Layout ***********/
+
+.checkbox-wrapper {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  //border: 1px solid black;
+  cursor: pointer;
+
+  .checkbox-input {
+    display: none;
+  }
+
+  .checkbox-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+
+    &.checked {
+      color: $highlighter-color;
+    }
+  }
+
+  &:hover {
+    color: $highlighter-color;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .checkbox-text {
+      color: $disabled-text-color;
+    }
+  }
+
+  &.disabled .checkbox-icon {
+    color: $disabled-text-color;
+  }
+}
+
+/*********** 4. Textarea Layout ***********/
+
+.text-area-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  //  border: 1px solid black;
+  &.disabled {
+    color: $disabled-text-color;
+  }
+
+  &.error {
+    .text-area-input {
+      border-color: $error-color;
+      margin-bottom: 0px;
+    }
+
+    .text-area-error,
+    .text-area-label {
+      color: $error-color;
+    }
+  }
+
+  .text-area-label {
+    font-size: 12px;
+    // margin-bottom: 5px !important;
+    // border: 1px solid black;
+  }
+
+  .text-area-input {
+    padding: 2px 8px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $highlight-color;
+    }
+  }
+
+  .text-area-error {
+    font-size: 12px;
+    color: $error-color;
+  }
+}
+
+/*********** 5. Textfield Layout ***********/
+
+.text-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid red;
+
+  &.error {
+    .input-field {
+      border-color: $error-color;
+      margin-bottom: 0px;
+    }
+
+    .input-error,
+    .text-area-label {
+
+      color: $error-color;
+    }
+  }
+
+  .text-area-label {
+    font-size: 13px;
+    // border: 1px solid black;
+    margin-bottom: 5px !important;
+  }
+
+  .input-field {
+    padding: 2px 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    // margin-bottom: 18px;
+    // border: 1px solid black;
+
+    &:focus {
+      border-color: #1976d2;
+      box-shadow: none;
+    }
+
+    &[type="number"] {
+      text-align: right;
+
+      // ✅ Hide up/down arrows in Chrome, Safari, Edge
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      // ✅ Hide up/down arrows in Firefox
+      // -moz-appearance: textfield;
+    }
+
+  }
+
+  .input-error {
+    font-size: 12px;
+    color: #d32f2f;
+  }
+}
+
+
+// AS PER ERP SOME OF INPUT FIELD HAVE THER OWN COLOR IN BACKGROUND
+// yellow input field
+.bkg-pink {
+  background-color: rgb(253, 216, 222);
+
+  &:disabled {
+    background-color: rgb(253, 216, 222);
+  }
+}
+
+// for yellow input field
+.bkg-yellow {
+  background-color: #eec964;
+
+  &:disabled {
+    background-color: #eec964;
+  }
+}
+
+// required field mark as red asterisk
+.required-asterisk {
+  color: red;
+  margin-left: 2px;
+  font-size: 16px; // ← Increase as needed
+  font-weight: bold; // optional, makes it bolder
+  line-height: 1;
+}
+
+.searchableField {
+  background-color: #d6e8fb; // light blue
+  border: 1px solid #4a90e2; // vibrant blue border
+  color: #333;
+  padding-right: 28px; // reserve space if you add a search icon
+
+  &:focus {
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+    background-color: #d6e8fb;
+  }
+}
+
+/*********** 6. Table Layout ***********/
+
+.table-container {
+  border: 1px solid rgb(181, 177, 177);
+  // padding-bottom: 2px;
+  // padding-inline: 2px;
+  max-height: 200px;
+  /* Limit the height */
+  overflow-y: auto;
+  /* Show vertical scrollbar when content exceeds max-height */
+  overflow: auto;
+
+}
+
+
+.table-add-record {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: end;
+  padding: 0rem 0.5rem;
+  padding-top: 0.2rem;
+
+  button {
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+}
+
+
+.table_fix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  // border: 1px solid black;
+
+  thead {
+    position: relative;
+    top: 0;
+    background: rgb(208, 207, 207);
+  }
+
+  th,
+  td {
+    //border: 1px solid #ddd;
+    text-align: left;
+    position: sticky;
+    //border: 1px solid black;
+  }
+
+  th {
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
+    // padding: 3px;
+    // border: 1px solid red;
+    position: sticky;
+  }
+
+  tr {
+    td {
+      .text-field-wrapper {
+        .input-field {
+
+
+          border-radius: none;
+          margin-bottom: 0px;
+          // border: 1px solid black;
+        }
+      }
+    }
+  }
+}
+
+// .table-container{
+//   border: 1px solid rgb(181, 177, 177);
+//   overflow: auto;
+// }
+
+
+.table__cell {
+
+  &__centered {
+    box-sizing: border-box;
+
+    svg {
+      color: black;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+.table_v2,
+.table-container {
+  // width: 90%;
+  // margin-inline: 0.5rem;
+  // margin-block: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  // padding-inline: 1.4rem;
+  border: 1px solid rgb(235, 232, 232);
+  // max-height: 90px;
+
+  // overflow-y: auto;
+  // overflow-x: auto;
+  // position: relative;
+
+  margin-bottom: 1rem;
+
+
+  thead {
+    // position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+    //position: relative;
+    //border: 1px solid black;
+  }
+
+
+  .sticky-column {
+    position: sticky;
+    background-color: #fff;
+    // z-index: 1000;
+    //position: relative;
+    // border: 1px solid black;
+  }
+
+  .sticky-column:not(.right) {
+    left: 0;
+  }
+
+  .sticky-column.right {
+    right: 0;
+  }
+
+  /* Add a shadow effect to indicate scrollable content */
+  .sticky-column::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    position: relative;
+  }
+
+  .sticky-column.right::after {
+    left: -5px;
+    right: auto;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    //border: 1px solid black;
+    position: relative;
+  }
+
+  thead {
+    th {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 8px;
+      min-width: 100px;
+      text-align: center;
+      position: sticky;
+
+      &[data-required="true"] {
+        &::after {
+          content: "*";
+          color: red;
+          padding-left: 6px;
+          font-size: 14px;
+        }
+      }
+    }
+
+
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    text-align: left;
+    //border: 1px solid black;
+  }
+
+
+  tbody {
+    tr {
+      td {
+
+        .text-field-wrapper,
+        .select-wrapper {
+
+          .input-field,
+          .select-input {
+
+            height: 100%;
+            box-sizing: border-box;
+            border-radius: none;
+            margin-bottom: 0px;
+            // border: 1px solid black;
+            font-size: 14px;
+          }
+
+          margin-bottom: 0px;
+        }
+
+        padding: 0px;
+
+        input[type="text"],
+        [type="email"],
+        [type="number"] {
+          padding: 3px 8px;
+        }
+      }
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+  }
+}
+
+
+// LATEST USED TABLE CLASS
+.table-wrapper-v3 {
+  overflow: hidden; // prevent parent from scrolling
+  position: relative;
+  border: 1px solid rgb(181, 177, 177);
+
+  .simplebar-content {
+    height: 100%; // occupy full height
+    overflow: auto; // allow scrolling inside
+  }
+
+
+  .table-sticky-wrapper {
+    // height: 280px;
+    // max-height: 280px;
+    height: 180px;
+    max-height: 180px;
+    overflow-y: auto;
+    // overflow-x: hidden;
+    overflow-x: auto;
+    position: relative;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      thead th {
+        position: sticky;
+        top: 0;
+        background-color: #eae8e8;
+        z-index: 2;
+        // border-bottom: 1px solid #dee2e6;
+        white-space: nowrap;
+        font-weight: 500;
+        text-align: center;
+        font-size: 13px;
+        padding: 0.4rem;
+      }
+
+      tbody td {
+        white-space: nowrap;
+        vertical-align: middle;
+        // border-top: 1px solid #dee2e6;
+        border: #ccc;
+      }
+
+      tbody {
+        tr {
+          td {
+
+            .text-field-wrapper,
+            .select-wrapper {
+
+              .input-field,
+              .select-input {
+
+                height: 100%;
+                box-sizing: border-box;
+                border-radius: none;
+                margin-bottom: 0px;
+                // border: 1px solid black;
+                font-size: 14px;
+              }
+
+              margin-bottom: 0px;
+            }
+
+            padding: 0px;
+
+            input[type="text"],
+            [type="email"],
+            [type="number"] {
+              padding: 3px 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .sticky-column.left {
+      position: sticky;
+      left: 0;
+      z-index: 99999;
+      background-color: #fff;
+      border-right: 1px solid #dee2e6;
+    }
+
+    // tr:focus-within {
+    //   outline: 2px solid black; // Highlight row on focus
+    // }
+
+    //     thead th[data-required="true"]::after {
+    //     content: " *";
+    //     color: #d32f2f; // ERP-red, not eye-burning
+    //     font-weight: 600;
+    //     margin-left: 2px;
+    // }
+  }
+
+  .height-auto {
+    height: calc(100vh - 300px);
+    max-height: calc(100vh - 300px);
+  }
+
+  .height-100 {
+    height: 100px;
+    max-height: 100px;
+  }
+
+  .height-150 {
+    height: 150px;
+    max-height: 150px;
+  }
+
+  /* Only for 2-line headers in Account Wise TDS Master table */
+  // this class useing only acc wise tds mstr form for lable name showing in two  line
+  // added by akshay 24/10/25
+  .tds-header-th {
+    white-space: normal;
+    /* allow wrapping */
+    word-break: break-word;
+    /* break long words if needed */
+    line-height: 1.2em;
+    /* line height for readability */
+    max-height: 2.4em;
+    /* exactly 2 lines */
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+
+.dealer-table {
+  th {
+    font-size: 14px; // Customize header font size
+    font-weight: 600;
+  }
+
+  td {
+    font-size: 13px; // Customize body font size
+  }
+}
+
+
+
+
+
+/*********** 2. Select Layout ***********/
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  // margin-bottom: 5px;
+  //  border: 1px solid black;
+  .select-label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    // border: 1px solid black;
+  }
+
+  .select-input {
+    padding: 2px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    // margin-bottom: 18px;
+
+    &:focus {
+      border-color: #1976d2;
+      box-shadow: none;
+    }
+  }
+}
+
+
+/*********** Style for TopUpperLeftSidebodertext Class  ***********/
+
+.text-wrapper {
+  position: relative;
+}
+
+
+.text-label {
+  position: absolute;
+  top: -11px;
+  left: 10px;
+  // background: #fff;
+   background: #fff3cd;
+  padding: 0px 8px;
+  font-size: 13px;
+  color: #333;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.Transaction-height {
+  height: 40px;
+}
+
+.gst-height {
+  height: 98%;
+}
+
+.history_height {
+  height: 80%;
+}
+
+.history-container {
+  width: 100%;
+  ;
+}
+
+.customer-height {
+  height: 70%;
+}
+
+.cusMstGST-height {
+  height: 100%;
+}
+
+//**************** Notes ******************
+.note-text {
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+//**************** Table Title ******************
+.table-title {
+  border: 1px solid rgb(214, 214, 214);
+  border-bottom: none;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1rem;
+
+  .add-action {
+    padding: 0px 6px;
+    font-size: 12px;
+
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: bolder;
+  }
+
+  padding-block: 3px;
+}
+
+
+
+//**************** Table Action *****************
+.row-action {
+  display: flex;
+  align-items: center;
+  // border: 1px solid black;
+  // height: 100%;
+  justify-content: space-evenly;
+  padding: 2px;
+
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 5px;
+
+    &:focus {
+      outline: none;
+    }
+
+    svg {
+      fill: currentColor;
+    }
+
+    &.delete-button {
+      // color: #dc3545;
+      color: black;
+
+      :hover {
+        color: #dc3545;
+      }
+
+    }
+
+    &.update-button {
+      color: #007bff;
+    }
+  }
+
+  .vertical-line {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+    margin: 0 5px;
+  }
+}
+
+//************** overLay *******************
+.helplist__overlay {
+  position: fixed;
+  /* or absolute if within a container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* semi-transparent background */
+  z-index: 1000;
+  /* Ensure it is on top of other elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helplist__content {
+  background: white;
+  padding: 20px;
+
+  // border: 1px solid black;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 60%;
+  max-height: 80%;
+  overflow: auto;
+
+}
+
+
+//************** Loader for buttons *******************
+// Spinner styles
+.button-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3; // light gray background
+  border-top: 2px solid #3498db; // primary color
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px; // space between spinner and text
+  vertical-align: middle;
+}
+
+// Spinner animation
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+//************** Physical inventory form *******************
+// addd by akshay 13-11-25 for uplaod phy inv form table data color invalid item code
+.error-cell-red {
+  background-color: #ff9999 !important;
+  border: 1px solid #cc0000 !important;
+}
+
+.error-cell-blue {
+  background-color: #99ccff !important;
+  border: 1px solid #0066cc !important;
+}
+
+.table_cell.error-cell-red .form-control,
+.table_cell.error-cell-blue .form-control {
+  background-color: inherit !important;
+  color: #000 !important;
+}
+
+//added by akshay 18-11-25 for radio box in material Details report filter
+.radio-big-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px 12px;
+  width: 70%;
+}
+
+.radio-big-box .radio-item {
+  width: 25%;
+  /* 2 columns */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  // padding: 4px 0;
+  font-size: 12px;
+}
+
+
+
+/// implement by askshay
+/* MAIN CARD */
+.emfa-dashboard-root {
+  // padding: 10px 0;
+}
+
+.emfa-main-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 11px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* HEADER */
+.emfa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.emfa-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(172, 7, 4);
+  ;
+}
+
+.emfa-header-right {
+  font-size: 14px;
+  font-weight: 700;
+  color: #020915;
+}
+
+/* GRIDS */
+.emfa-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.emfa-grid-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.emfa-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.emfa-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.emfa-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* CARD */
+.emfa-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+}
+
+/* SMALL STAT CARDS */
+.emfa-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.emfa-stat-value {
+  margin-top: 4px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.emfa-stat-sub {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+/* MEMBER STATUS BADGE */
+.emfa-status-badge {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #ecfdf3;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+/* PROGRESS LIST */
+.emfa-progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.emfa-progress-label {
+  width: 60px;
+  color: #4b5563;
+}
+
+.emfa-progress-track {
+  flex: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  margin: 0 8px;
+  overflow: hidden;
+}
+
+.emfa-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #22c55e;
+}
+
+.emfa-progress-percent {
+  width: 38px;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* CATEGORY TABLE */
+.emfa-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.emfa-table th,
+.emfa-table td {
+  padding: 6px 4px;
+  text-align: left;
+}
+
+.emfa-table th {
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.emfa-table td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.emfa-table td.emfa-amount-positive {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.emfa-table td.emfa-amount-negative {
+  color: #b91c1c;
+}
+
+/* MEMBER INFO LIST */
+.emfa-info-list {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.emfa-info-list div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.emfa-info-label {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.emfa-info-value {
+  font-weight: 600;
+}
+
+/* DEALER BADGE */
+.emfa-dealer-badge {
+  margin-top: 10px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  // background: #ecfeff;
+  // border: 1px solid #bae6fd;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0369a1;
+  display: inline-block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .emfa-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .emfa-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+
+  .emfa-grid-6,
+  .emfa-grid-3,
+  .emfa-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

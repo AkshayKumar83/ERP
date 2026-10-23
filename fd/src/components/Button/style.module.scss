@@ -1,0 +1,25 @@
+.btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    background: #146194;
+    cursor: pointer;
+    transition: all 200ms ease; 
+
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &:active {
+        // filter: invert(0.5);
+        background: red;
+       
+    }
+    &:disabled{
+        background-color: gray;
+        color: rgba(1,1,1,0.7);
+    }
+}
+

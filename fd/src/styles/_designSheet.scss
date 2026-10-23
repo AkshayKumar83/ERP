@@ -1,0 +1,12 @@
+// @use "variables" as *;
+@import "variables";
+
+.design-sheet {
+  .table-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: $primary-bg-color;
+  }
+}

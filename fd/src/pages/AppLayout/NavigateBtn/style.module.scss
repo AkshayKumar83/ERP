@@ -1,0 +1,27 @@
+
+
+.navigate_btn_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5rem;
+  margin-top: auto;
+  // border: 1px solid black;
+  button {
+    padding: 0.8rem 2.2rem;
+    background-color: rgb(133, 143, 220);
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      gap: 1rem;
+      color: white;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

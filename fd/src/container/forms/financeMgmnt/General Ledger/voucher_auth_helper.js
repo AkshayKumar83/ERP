@@ -1,0 +1,20 @@
+export const authInitData = {
+    division_id:"",
+    section:"",
+    section_p:"",
+    curryear:"",
+    vch_type:"",
+    upper_limit:"",
+    p_trans:"",
+    from_date:"",
+    to_date:"",
+    posting_date:"",
+    unposted_list:"",
+    posted_list:"",
+    no_posted:"",
+    no_unposted:"",
+    current_list:"",
+    di_message:"",
+    di_vch_cat:"",
+
+}

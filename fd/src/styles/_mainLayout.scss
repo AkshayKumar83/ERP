@@ -1,0 +1,262 @@
+// @use "variables" as *;
+@import "variables";
+
+.main-wrapper {
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: $primary-shadow;
+    background-color: $header-bg-color;
+    // border: 1px solid black;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      height: $header-height;
+      padding: 0 1rem 0 0;
+      .navbar-logo-wrapper {
+        // border-bottom: 1px solid white;
+        background-color: $sidebar-bg-color;
+        padding: 0 1.5rem;
+        width: $sidebar-width;
+        display: flex;
+        justify-content: center;
+        // .logo {
+          // line-height: $header-height; 
+
+        // }
+      }
+
+      .app-search-wrapper {
+        margin-left: 1rem;
+        padding: 8px 0;
+
+        .form-control {
+          border: none;
+          height: 38px;
+          padding-left: 40px;
+          padding-right: 20px;
+          background-color: $secondary-bg-color;
+          box-shadow: none;
+          border-radius: 30px;
+          // border: 1px solid blue;
+        }
+        .search-icon {
+          position: absolute;
+          z-index: 10;
+          height: 16px;
+          width: 16px;
+          left: 13px;
+          top: 11px;
+          color: $gray-600;
+        }
+      }
+    }
+  }
+  .sidebar {
+    width: $sidebar-width;
+    z-index: 999;
+    background-color: $sidebar-bg-color;
+    bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: $header-height;
+    box-shadow: $primary-shadow;
+    padding: 10px 0 30px 0;
+
+    ul {
+      li {
+        font-size: 14px;
+        a {
+          display: block;
+          padding: 0.5rem 1.5rem;
+          color: $gray-600;
+          position: relative;
+          font-size: 13px;
+          transition: all 0.4s;
+          font-weight: 500;
+          text-decoration: none;
+          // border: 1px solid white;
+
+          .icon {
+            height: 18px;
+            width: 18px;
+            display: inline-block;
+            opacity: 0.75;
+            margin-right: 4px;
+          }
+
+          &:hover {
+            color: $sidebar-hover-color;
+            // background-color: rgb(126, 126, 126);
+            background-color: rgb(102, 102, 102);
+          }
+        }
+      }
+      .sub-menu {
+        // padding: 0px,10px,0px, 10px;
+        // border: 1px solid white;
+        li {
+          a {
+            padding: 0.4rem 0.25rem 0.4rem 0.25rem;
+            font-size: 13px;
+            &:hover {
+              color: $sidebar-hover-color; // Hover effect for submenu
+            }
+
+            .ms-1-form-name{
+              // border: 1px solid red;
+              padding: auto 0px;
+            }
+          }
+        }
+      }
+      .menu-title {
+        padding: 12px 20px;
+        letter-spacing: 0.05em;
+        pointer-events: none;
+        cursor: default;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $gray-600;
+        font-weight: 600;
+        opacity: 0.7;
+      }
+    }
+  }
+
+// below class added by amit on 17.06.2025
+ .sidebar-hidden {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-visible {
+  transform: translateX(0%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.sidebar-hover-zone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px; // detect hover within 10px from left edge
+  height: 100vh;
+  z-index: 998; // just below sidebar
+}
+}
+
+.mm-active {
+  color: $sidebar-hover-color !important;
+  > a {
+    color: $sidebar-hover-color !important;
+    .icon {
+      color: $sidebar-hover-color !important;
+    }
+  }
+}
+.simplebar-scrollbar::before {
+  background-color: $gray-600 !important;
+}
+
+.metismenu {
+  margin: 0;
+
+  li {
+    display: block;
+    width: 100%;
+  }
+
+  .mm-collapse {
+    display: none;
+
+    &:not(.mm-show) {
+      display: none;
+    }
+
+    &.mm-show {
+      display: block;
+    }
+  }
+
+  .mm-collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: 0.35s;
+    transition-property: height, visibility;
+  }
+}
+
+.main-content {
+  margin-left: $sidebar-width;
+  overflow: hidden;
+  margin-top: $header-height;
+  // padding: 24px 15px 10px 15px;
+  padding: 5px 0px 5px 0px;
+  // border: 1px solid red;
+  // height: calc(100vh - 36px);
+}
+
+// newly added on date 17.06.2025 for making autoslide by amit
+.main-content {
+  margin-top: $header-height;
+  padding: 5px 0px;
+  transition: margin-left 0.3s ease;
+
+  &.with-sidebar {
+    margin-left: $sidebar-width;
+  }
+
+  &.full-width {
+    margin-left: 0;
+  }
+}
+
+
+.user-dropdown {
+  .dropdown-item {
+    i {
+      display: inline-block;
+    }
+  }
+}
+.header-item {
+  height: $header-height;
+  box-shadow: none !important;
+  border: 0;
+  border-radius: 0px;
+}
+
+.header-profile-user {
+  height: 45px;
+  // height: 52px;
+  width: 45px;
+  // width: 52px;
+  padding: 3px;
+}
+
+
+.menu-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s;
+  // border: 1px solid red;
+  width: 16px;
+  height: 16px;
+  // font-size: 10px;
+}
+
+.mm-active > a > .menu-arrow {
+  transform: rotate(90deg);
+}
+

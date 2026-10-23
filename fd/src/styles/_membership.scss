@@ -1,0 +1,105 @@
+
+// ## For Member - Update - Upload 
+
+.member-upload-table-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;   /* 👈 horizontal scroll */
+  position: relative;
+}
+
+/* Force wide table so it scrolls horizontally */
+.member-upload-table {
+  min-width: 1400px;  /* adjust if you add more columns */
+  border-collapse: collapse;
+}
+
+/* Header cells */
+.member-upload-table thead th {
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  z-index: 2;
+  white-space: nowrap;   /* 👈 no wrap */
+  text-align: center;
+  vertical-align: middle;
+  height: 38px;
+  font-size: 13px;
+}
+
+/* Body cells */
+.member-upload-table tbody td {
+  white-space: nowrap;   /* 👈 key line */
+  vertical-align: middle;
+  height: 36px;          /* 👈 equal row height */
+  line-height: 36px;     /* 👈 text centered vertically */
+  font-size: 13px;
+  padding: 0 8px;
+}
+
+/* Optional: ellipsis for very long text */
+.member-upload-table tbody td {
+  max-width: 250px;      /* control column expansion */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//  2. For Bulk Bill Upload
+.bulk-bill-table-wrapper {
+  max-height: 290px;
+  overflow: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+/* Force equal height rows */
+.bulk-bill-table-wrapper table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Uniform cells */
+.bulk-bill-table-wrapper th,
+.bulk-bill-table-wrapper td {
+  height: 48px;               /* 👈 fixed height */
+  max-height: 48px;
+  white-space: nowrap;        /* 👈 prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
+/* Make text vertically centered properly */
+.bulk-bill-table-wrapper td {
+  line-height: 48px;
+}
+
+/* Sticky header */
+.bulk-bill-table-wrapper thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Hover effect */
+.bulk-bill-table-wrapper tbody tr:hover {
+  background-color: #f1f3f5;
+  transition: 0.2s ease;
+}
+
+/* Error row styling */
+.bulk-bill-table-wrapper .table-danger {
+  background-color: #ffecec !important;
+}
+
+
+.bulk-bill-table-wrapper td:last-child {
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}

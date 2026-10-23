@@ -1,0 +1,22 @@
+.toolbar {
+  display: flex;
+  gap: 6px;
+  .btn-toolbar {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+  }
+
+  .toolbar-split {
+    display: flex;
+    gap: 4px;
+  }
+  .clipboard {
+    display: flex;
+    gap: 8px;
+  }
+  .change-entries-button {
+    display: flex;
+    gap: 8px;
+  }
+}

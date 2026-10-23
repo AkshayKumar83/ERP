@@ -1,0 +1,28 @@
+exports.transformHdrToDBTable = (data) => {
+    return {
+    member_id:data?.member_id,
+    efa_ctrl_id:data?.efa_ctrl_id,
+    bank_cd:data?.bank_cd,
+    instrument_no:data?.instrument_no,
+    instrument_date:data?.instrument_date,
+    status:data?.status,
+    efa_amount:data?.efa_amount,
+    no_of_install:data?.no_of_install,
+    emi_in_perc:data?.emi_in_perc,
+    service_charge_rate:data?.service_charge_rate,
+    interest_rate:data?.interest_rate,
+    igst_rate:data?.igst_rate,
+    cgst_rate:data?.cgst_rate,
+    sgst_rate:data?.sgst_rate,
+    efa_compliance_yesno:data?.efa_compliance_yesno,
+    timely_receipt_incent_rate:data?.timely_receipt_incent_rate,
+    penal_sc_rate:data?.penal_sc_rate,
+    efa_remarks:data?.efa_remarks,
+    loan_ref_no:data?.loan_ref_no,
+    emi_compute_perc_on:data?.emi_compute_perc_on,
+    emi_frequency_flag:data?.emi_frequency_flag,
+    emi_date_option:data?.emi_date_option || 'M',
+    efa_application_date:data?.efa_application_date,
+    loan_id:data?.loan_id,
+    };
+  };

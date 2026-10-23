@@ -1,0 +1,229 @@
+.loginContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid black;
+    box-sizing: border-box;
+    // background: rgb(2,0,36);
+    // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,150,171,1) 38%, rgba(112,112,133,1) 94%);
+  }
+  
+  .halfWidth {
+    width: 50%;
+    height: 100%;
+    // border: 1px solid black;
+  }
+  
+  .section {
+    background-color: #f3f4f6;
+    // background-color: #6b7280;
+    width: 100%;
+    // border: 1px solid black;
+    padding: 20px 32px;
+    box-sizing:  border-box;
+    height: 100vh;
+    // border: 1px solid black;
+    background: rgb(196,196,199);
+    background: linear-gradient(90deg, rgba(196,196,199,1) 0%, rgba(196,220,224,1) 38%, rgba(231,231,231,1) 94%);
+  }
+  
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    // height: 90vh;
+    height: 100%;
+    box-sizing: border-box;
+    // border: 1px solid black;
+  }
+  
+  .card {
+    // width: 100%;
+    width: 40%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    // border: 1px solid black;
+    background-color: transparent;
+    background-color: #e4e6ea;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+    // space-y: 1.5rem;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    // border: 1px solid black;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #111827;
+    // border: 1px solid black;
+    padding: 14px 2px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    // border: 1px solid black;
+    width: 70%;
+
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #111827;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.75rem;
+   border: 1px solid rgb(92, 92, 92);
+    // border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    // border: 1px solid black;
+    box-sizing: border-box;
+    background-color: transparent;
+    &:focus{
+      // background-color: white;
+      background-color: transparent;
+    }
+    
+  }
+  
+  .passwordContainer {
+    display: flex;
+    align-items: center;
+    // border: 1px solid #d1d5db;
+    border: 1px solid rgb(92, 92, 92);
+    border-radius: 0.5rem;
+    // background-color: #f9fafb;
+    background-color: transparent;
+
+  }
+  
+  .passwordInput {
+    width: 80%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    // border: 1px solid rgb(92, 92, 92);
+    background-color: transparent;
+    outline: none;
+    &:focus{
+      // background-color: white;
+      background-color: transparent;
+    }
+  }
+  
+  .icon {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .eyeIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .checkboxContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    border-radius: 0.25rem;
+  }
+  
+  .checkboxLabel {
+    margin-left: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .forgotPassword {
+    font-size: 0.875rem;
+    color: #3b82f6;
+  }
+  
+  .submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: medium;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .footerText {
+    font-size: 0.875rem;
+    // background-color: red;
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .signUpLink {
+    color: #3b82f6;
+  }
+  .resetPasswordTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #111827;
+    padding: 14px 2px;
+}
+  
+
+  @media screen and (max-width: 800px) {
+    .section{
+      padding: 20px 0px;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      color: #111827;
+      padding: 7% 3px;
+    }
+    .form{
+      width: 100%;
+    }
+    .card{
+      width: 60%;
+    }
+
+
+}
+
+

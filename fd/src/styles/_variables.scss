@@ -1,0 +1,38 @@
+$header-bg-color: #ffffff;
+
+$disabled-bg-color: #f2f2f2;
+$disabled-text-color: #bdbdbd;
+$highlight-bg-color: #f8f8fd;
+$highlight-color: #2f89f0;
+$primary-color: #333333;
+$secondary-color: #ffffff;
+$gray-600: #74788d;
+$border-color: #dddddd;
+$border-color-bs: rgba(0, 0, 0, 0.175);
+
+$page-width: 1300px;
+
+$primary-shadow: 0 2px 4px rgba(#000000, 0.08);
+
+//Sidebar Variables
+$sidebar-bg-color: #252b3b;
+$sidebar-hover-color: #d7e4ec;
+$sidebar-width: 220px; // initially sidbar with is 240px
+// $header-height: 55px;
+$header-height: 38px;
+
+//Global Variables
+$primary-bg-color: #dee7ec;
+$secondary-bg-color: #f1f5f7;
+$highlighter-color: #5664d2;
+$success-color: #1cbb8c;
+$error-color: #ff3d60;
+$border-radius: 4px;
+$transition-duration: 0.3s;
+
+@mixin transition($property) {
+  transition: $property $transition-duration ease-in-out;
+}
+
+
+

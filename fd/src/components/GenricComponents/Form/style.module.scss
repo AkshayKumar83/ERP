@@ -1,0 +1,64 @@
+
+.form__input,
+.form__select,
+.form__textarea {
+  padding: 2px 4px;
+  height: 24px; // Set a fixed height for all inputs
+  box-sizing: border-box;
+  flex-grow: 1;
+  border: 1px solid rgb(157, 157, 157);
+  font-size: 14px; // Set a consistent font size
+  line-height: 20px; // Set a consistent line height
+}
+
+.form__input {
+  outline: none;
+  
+  &--checkbox,
+  &--radio {
+    flex-grow: unset;
+    height: auto; // Allow checkboxes and radio buttons to have their default height
+    width: auto; // Allow checkboxes and radio buttons to have their default width
+    margin-right: 5px; // Add some spacing to the right of checkboxes and radio buttons
+  }
+
+  &--date {
+    // Remove default styling for date inputs
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right 5px center;
+    background-size: 16px;
+
+  }
+}
+
+
+
+input,
+select {
+  outline: none;
+  
+  &:disabled {
+    background-color: rgb(234, 234, 234);
+    // cursor: not-allowed;
+  }
+  
+  &:focus {
+    background-color: rgb(255, 187, 147);
+  }
+}
+
+// Add styles for labels to ensure consistent alignment
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+// Add styles for form groups to ensure consistent spacing
+.form__group {
+  margin-bottom: 15px;
+}
+
+

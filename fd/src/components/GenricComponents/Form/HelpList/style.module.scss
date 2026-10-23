@@ -1,0 +1,81 @@
+
+  .Help_list_container {
+    padding-inline: 18px;
+    max-height: 40vh; 
+    max-height: calc(100% - 50px);
+    background-color: #e5e7eb;  
+    padding-block-start: 1.5rem; 
+    padding-block-end: 3rem;  
+    overflow: hidden;        
+    background: transparent; 
+    width: 65%;              
+    height: 70vh;
+    //z-index: 100; 
+  
+  }  
+  
+  
+  .btn_style {
+    height: 8%; 
+    background-color: #a5b4fc;
+    padding: 4px;  
+    display: flex;  
+    justify-content: flex-end; 
+    align-items: center;
+    z-index: 20;  
+  } 
+  
+  .table_container {
+    height: 100%; 
+    background-color: white; 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);  
+    padding: 4px; 
+    overflow-x: auto;  
+    overflow-y: auto;  
+   // border: 1px solid black;
+    //z-index: 100;
+  
+  } 
+  
+  .table {
+    //border: 1px solid black; 
+    width: 100%;
+    height: 5%;
+    background-color:  white; 
+    //border-collapse: collapse;
+    
+    
+  
+    thead {
+     // background-color: white;
+      width: 100%;
+      z-index: 1; /* Ensure headers stay on top while scrolling */
+      position: sticky;
+      background-color:  #a5b4fc;
+    } 
+  
+    th { 
+      font-size: 15px;
+      width: 50%; 
+     // border: 1px solid black;
+
+      //color: white;
+      
+    }  
+
+    tr {
+      cursor: pointer;
+      border: 1px solid black; 
+
+      &:hover {
+        background-color: #f1f1f1; 
+      }
+    }
+  
+    td {
+      //border: 1px solid black;
+      font-size: 12px;  
+      padding-left: 8px;  
+    }
+  }
+  

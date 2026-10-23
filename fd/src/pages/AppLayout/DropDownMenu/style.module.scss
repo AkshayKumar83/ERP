@@ -1,0 +1,66 @@
+
+
+.menuItem {
+  text-decoration: none;
+  list-style: none;
+  font-size: 13px;
+  // padding: 4px 12px;
+  width: 19rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: rgb(228, 222, 222);
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    .dropDown__menu__icon {
+      transform: rotate(-90deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .menuItemHeader{
+    // border: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 12px;
+  }
+
+  // &:not(:last-child) {
+  //   margin-bottom: 5px;
+  // }
+
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: rgb(210, 210, 210);
+  }
+}
+
+.submenu__container {
+  position: absolute;
+  left: 100%; 
+  top: 0;
+  min-width: 15rem; 
+;
+  background-color: white;
+  z-index: 10; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  border: 1px solid rgba(0,0,0,0.1);
+
+}
+
+.menuItem .submenu__container {
+  display: block; /* Show submenu on hover */
+}
+
+.menuList {
+  position: relative;
+}

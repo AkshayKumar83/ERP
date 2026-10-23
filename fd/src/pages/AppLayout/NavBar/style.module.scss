@@ -1,0 +1,241 @@
+
+  
+
+// .navBarContainer {
+//   width: 100%;
+//   border: 1px solid #d9d9d9;
+//   background-color: white;
+//   border-radius: 0.5rem;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   box-sizing: border-box;
+//   // border: 1px solid black;
+// }
+
+// .navBarContent {
+//   padding: 5px 1.25rem;
+//   border-radius: 0.5rem;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   box-sizing: border-box;
+// }
+
+// .menuContainer {
+//   display: flex;
+//   gap: 2.5rem;
+//   padding: 0 0.25rem;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .menuIconContainer {
+//   display: flex;
+//   gap: 0.75rem;
+// }
+
+// .menuIconWrapper {
+//   width: 1.75rem;
+//   height: 100%;
+//   margin-right: 0.5rem;
+// }
+
+// .menuIcon {
+//   width: 100%;
+//   height: 100%;
+//   color: #6b7280;
+//   cursor: pointer;
+//   transition: color 0.15s ease-in-out;
+//   &:hover {
+//     color: #1f2937;
+//   }
+// }
+
+// .premisesInfoContainer {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .premisesInfoContent {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+// }
+
+// .premisesName, .unitText {
+//   letter-spacing: 0.05em;
+//   font-weight: 600;
+//   font-size: 0.875rem;
+//   padding-top: 0.25rem;
+//   color: #ef4444;
+// }
+
+// .userInfoContainer {
+//   display: flex;
+//   gap: 1rem;
+//   // border: 1px solid rgb(229, 225, 225);
+//   justify-content: center;
+//   align-items: center;
+//   // padding: 0 0.75rem;
+//   width: 20%;
+
+// }
+
+// .userIcon {
+//   width: 1.75rem;
+//   height: 100%;
+//   border: 1px solid rgb(57, 57, 57);
+//   // color: #6b7280;
+//   color: rgb(57, 57, 57);
+//   border-radius: 100%;
+// }
+
+// .userName {
+//   color: rgb(57, 57, 57);;
+//   font-size: 14px;
+//   // border: 1px solid black;
+//   flex: 1;
+  
+// }
+
+
+
+.navBarContainer {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.navBarContent {
+  padding: 2px 1.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.menuContainer {
+  display: flex;
+  gap: 2.5rem;
+  padding: 0 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuIconContainer {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.menuIconWrapper {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6b7280;
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: #1f2937;
+  }
+}
+
+.premisesInfoContainer {
+  flex: 1;
+  height: 100%;
+}
+
+.premisesInfoContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.premisesName, .unitText {
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding-top: 0.25rem;
+  color: #ef4444;
+}
+
+.userInfoContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.notificationIconWrapper {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+.notificationIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6b7280;
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: #1f2937;
+  }
+}
+
+.userProfileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+.userIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid rgb(57, 57, 57);
+  color: rgb(57, 57, 57);
+  border-radius: 100%;
+}
+
+.userName {
+  color: rgb(57, 57, 57);
+  font-size: 14px;
+  font-weight: 500;
+}
+

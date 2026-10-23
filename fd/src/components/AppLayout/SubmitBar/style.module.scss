@@ -1,0 +1,131 @@
+// .submitbar__container{
+//     border: 1px solid rgb(203, 202, 202);
+//     box-shadow: 0px 0px 4px rgb(gray, 0.3);
+//     display: flex;
+//     flex-direction: row;
+//     gap: 25px;
+//     width: 95%;
+//     justify-content: space-between;
+//     padding: 3px 35px;
+//     box-sizing: border-box;
+   
+//     .show__form__status{
+//         border: 1px solid rgb(215, 213, 213);
+//         width: 25%;
+//         color: rgb(114, 110, 110);
+//         background-color: white;
+//         align-items: center;
+//         padding: 2px 5px;
+//         box-shadow: 0px 0px 4px rgb(gray, 0.1);
+//         display: flex;
+//         gap: 20px;
+
+//     }
+
+//     .operation__btn{
+//         // border: 1px solid black;
+//         display: flex;
+//         gap: 10px;
+
+
+//         button{
+//             padding: 6px 12px;
+//         }
+//     }
+// }
+
+
+// @media screen and (max-width: 400px) {
+//     .submitbar__container {
+//         display: flex;
+//         // flex-wrap: wrap;
+//         padding: 0px 3px;
+//         gap: 0px;
+//         max-width: 300px;
+//         overflow: scroll;
+
+//         .show__form__status{
+//             // border: 1px solid black;
+//             font-size: 10px;
+//         }
+//     }
+// }
+
+
+.submitbar__container {
+    border: 1px solid rgb(203, 202, 202);
+    box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.3);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    width: 95%;
+    justify-content: space-between;
+    padding: 3px 35px;
+    box-sizing: border-box;
+   
+    .show__form__status {
+        border: 1px solid rgb(215, 213, 213);
+        width: 25%;
+        color: rgb(114, 110, 110);
+        background-color: white;
+        align-items: center;
+        padding: 2px 5px;
+        box-shadow: 0px 0px 4px rgba(128, 128, 128, 0.1);
+        display: flex;
+        gap: 20px;
+
+        // New styles for pageCount
+        &.with__page__count {
+            width: auto; // Allow width to adjust based on content
+            min-width: 25%; // Maintain minimum width
+            flex-wrap: wrap; // Allow items to wrap if needed
+            justify-content: space-between; // Spread items evenly
+
+            > div {
+                flex: 1 1 auto; // Allow items to grow and shrink
+                text-align: center; // Center text within each div
+                padding: 2px 5px; // Add some padding
+                white-space: nowrap; // Prevent text wrapping within divs
+            }
+
+            .page__count {
+                font-weight: bold; // Make page count stand out
+                color: rgb(80, 80, 80); // Slightly darker color for emphasis
+            }
+        }
+    }
+
+    .operation__btn {
+        display: flex;
+        gap: 10px;
+
+        button {
+            padding: 6px 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .submitbar__container {
+        display: flex;
+        padding: 0px 3px;
+        gap: 0px;
+        max-width: 300px;
+        overflow: scroll;
+
+        .show__form__status {
+            font-size: 10px;
+
+            &.with__page__count {
+                flex-direction: column; // Stack items vertically on small screens
+                align-items: flex-start; // Align items to the start
+                gap: 5px; // Reduce gap between items
+
+                > div {
+                    width: 100%; // Full width for each item
+                    text-align: left; // Left align text
+                }
+            }
+        }
+    }
+}
